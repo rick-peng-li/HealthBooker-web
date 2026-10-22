@@ -1,20 +1,18 @@
 {
   "name": "healthbooker",
   "version": "2.0.0",
-  "description": "Doctor appointment website",
-  "main": "server.js",
+  "private": true,
+  "description": "HealthBooker - Doctor appointment booking web application (MERN)",
   "scripts": {
-    "start": "node server.js"
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n server,client \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server run start",
+    "seed": "npm --prefix server run seed"
   },
-  "author": "Avinash905",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongodb": "^5.3.0",
-    "mongoose": "^6.9.0"
+  "devDependencies": {
+    "concurrently": "^10.0.6"
   }
 }

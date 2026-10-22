@@ -1,199 +1,146 @@
-<div id="top">
-<h1 align="center">HealthBooker 🧑‍⚕️</h1>
+# HealthBooker
 
-<div align="center">
-  <br>
-  <img src="https://img.shields.io/github/repo-size/Avinash905/HealthBooker?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/issues-closed-raw/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/last-commit/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/issues-pr/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/issues-pr-closed-raw/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/forks/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/stars/Avinash905/HealthBooker?style=for-the-badge" />
-    <img src="https://img.shields.io/github/contributors-anon/Avinash905/HealthBooker?style=for-the-badge" />
-  </div>
-  <br>
+Git 地址：https://github.com/rick-peng-li/HealthBooker-web
 
-<h3>📝 Description :</h3> 
-Welcome to our comprehensive healthcare platform! Our website offers a seamless experience for users and doctors alike. Sign up or log in to unlock a range of features. Easily browse through a list of available doctors, manage your profile, and submit queries effortlessly. Stay updated with notifications and enjoy secure access to your information. Aspiring doctors can apply through our user-friendly system. Book appointments with your preferred doctors and track their completion status. Admin features ensure smooth operations, including approval of doctor applications and user management. Rest assured, all data is stored securely. Join us to experience a new era of convenient and efficient healthcare interactions.
+## 项目简介
 
-<br/>
+HealthBooker 是一个前后端分离的医生预约平台（MERN 全栈应用）。用户可以注册登录、浏览医生、在线预约、查看通知并管理个人资料；医生可以申请入驻、处理预约；管理员可以在后台管理用户、医生、预约和医生申请。
 
----
+## 技术栈与架构
 
-### 🌐 Link:
+**前端（client/）**
+- React 19 + Vite 8（ESM 构建，路径别名 `@/` 指向 `src`）
+- Ant Design 6（统一 UI 组件库，主题色 #00abe4）
+- React Router v7（`createBrowserRouter`，路由独立放在 `src/router`，页面组件懒加载）
+- Redux Toolkit（用户状态管理）
+- Axios（统一请求封装、Token 拦截、错误统一处理）
 
-<h4> Live Site: https://healthbooker.onrender.com/ </h4>
+**后端（server/）**
+- Node.js + Express 5（ES Module，`node --watch` 热更新）
+- MongoDB + Mongoose 9
+- JWT 认证（bcryptjs 密码加密）
+- 生产模式下直接托管前端构建产物（client/dist），单端口部署
 
-<br>
-
-### 🛠️ Tools and technologies used :
-
-<div align=center>
-
-<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5"/> </a>
-<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" /> </a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript"/> </a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=white&color=148dff" alt="react" /> </a>
-<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/Node.js-8A2BE2?style=for-the-badge&logo=Node.js&color=b3ffb0" alt="nodejs" /> </a>
-<a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&color=008712" alt="express"/> </a>
-<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongodb" /> </a>
-<a href="https://redux-toolkit.js.org/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux-toolkit" /> </a>
-
-</div>
-
-<br>
-
-### 👋 Connect with me:
-
-<div align=center>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/dunna-avinash)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Avinash905)
-<a href="mailto:avinash.90527@gmail.com" target="_blank"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/avinashdunna)
-
-</div>
-
-<br>
-
----
-
-<p align="right"><a href="#top">Back to Top</a></p>
-
-### 📃Features :
-
-<ul>
-  <li><strong>User Registration and Login:</strong> Enabling user registration and login functionality is the foundation of any user-oriented platform.</li>
-  <li><strong>View Available Doctors:</strong> Allowing users to easily view the list of available doctors helps them find the right medical professional for their needs.</li>
-  <li><strong>Update Profile:</strong> Providing users with the ability to update their profiles keeps their information accurate and up to date.</li>
-  <li><strong>Contact Section for Queries:</strong> Including a contact section for user queries enhances user engagement and customer support.</li>
-  <li><strong>Notifications Tab:</strong> A notifications tab helps users stay informed about updates, appointments, and application statuses.</li>
-  <li><strong>Admin Management System:</strong> An admin management system is crucial for overseeing users, appointments, and doctor applications.</li>
-  <li><strong>Access Control:</strong> Restricting access to certain sections like notifications, profile, appointments, and doctor applications to logged-in users ensures data privacy and security.</li>
-  <li><strong>Doctor Application:</strong> Allowing users to apply to become a doctor on the site expands the pool of medical professionals and adds value to the platform.</li>
-  <li><strong>Book Appointments:</strong> Enabling users to book appointments with their preferred doctors streamlines the process of accessing medical services.</li>
-  <li><strong>Admin Approval for Doctor Requests:</strong> Admin approval for doctor applications ensures that only qualified professionals are listed on the platform.</li>
-  <li><strong>User and Doctor Removal:</strong> Admin's ability to remove users or doctors from the site is crucial for maintaining the platform's integrity.</li>
-  <li><strong>Appointment Marking:</strong> Allowing doctors and admin to mark appointments as completed ensures proper record-keeping.</li>
-  <li><strong>Application and Appointment Notifications:</strong> Sending notifications to users, doctors, and admins about application statuses and appointment updates enhances communication.</li>
-  <li><strong>Data Storage and Security:</strong> Storing all data in a database ensures data integrity, security, and easy retrieval of information.</li>
-</ul>
-
-<hr/>
-
-<p align="right"><a href="#top">Back to Top</a></p>
-
-### Steps to run the project on your local machine
-
-<ol>
-<li>Fork this repository</li>
-<li>Open terminal or command prompt on your local machine. Run the following command to clone the repository:</li>
+**目录结构**
 
 ```
-git clone https://github.com/your-username/your-repo.git
+HealthBooker-web/
+├── client/                  # 前端
+│   ├── public/              # 静态资源（favicon、manifest）
+│   └── src/
+│       ├── api/             # 接口请求封装（request.js + index.js）
+│       ├── assets/images/   # 图片资源
+│       ├── components/      # 可复用组件
+│       │   ├── common/      # 通用组件（加载等）
+│       │   ├── layout/      # 布局（主布局、后台布局、页脚）
+│       │   ├── home/        # 首页区块（Hero、关于、统计、联系）
+│       │   └── doctors/     # 医生卡片、预约弹窗
+│       ├── pages/           # 页面（home/auth/doctors/appointments/notifications/apply-doctor/profile/dashboard/error）
+│       ├── router/          # 路由配置与守卫
+│       ├── store/           # Redux store 与 slices
+│       ├── styles/          # 全局样式
+│       └── utils/           # 工具方法（auth、upload、date）
+├── server/                  # 后端
+│   ├── config/              # 数据库连接
+│   ├── controllers/         # 业务逻辑
+│   ├── middleware/          # JWT 认证中间件
+│   ├── models/              # Mongoose 模型
+│   ├── routes/              # 路由
+│   └── scripts/seed.js      # 初始化数据脚本
+└── package.json             # 根脚本（一键安装/启动）
 ```
 
-Replace **your-username** with your GitHub username and **your-repo** with the name of your repository.
+## 模块与页面功能
 
-<li>Open the project and rename <strong>.env.example</strong> files to <strong>.env</strong> in both client and root directory.</li>
+| 模块 | 页面 | 功能 |
+| --- | --- | --- |
+| 首页 | `/` | Hero 引导、关于我们、平台数据统计、联系我们表单 |
+| 认证 | `/login` `/register` | 登录 / 注册（支持上传头像） |
+| 医生 | `/doctors` | 医生列表卡片展示、登录后弹窗选择日期时间预约 |
+| 预约 | `/appointments` | 当前用户相关预约列表，医生可标记完成 |
+| 通知 | `/notifications` | 当前用户通知列表 |
+| 申请医生 | `/applyfordoctor` | 提交医生入驻申请（专科、经验、诊费） |
+| 个人资料 | `/profile` | 查看并修改资料，密码可选修改 |
+| 管理后台 | `/dashboard` | 用户管理、医生管理、预约管理、医生申请审批（仅管理员） |
 
-<li>Add your own environment variables to these both files.</li>
+## 接口设计
 
-<li>To run the backend, open a new terminal and execute:</li>
+| 方法 | 路径 | 说明 |
+| --- | --- | --- |
+| POST | `/api/user/login` | 登录，返回 `{ message, token }` |
+| POST | `/api/user/register` | 注册 |
+| GET | `/api/user/getuser/:id` | 获取单个用户 |
+| GET | `/api/user/getallusers` | 全部用户（管理员） |
+| PUT | `/api/user/updateprofile` | 更新资料 |
+| DELETE | `/api/user/deleteuser` | 删除用户 |
+| GET | `/api/doctor/getalldoctors` | 已通过审核的医生 |
+| GET | `/api/doctor/getnotdoctors` | 待审核医生申请（管理员） |
+| POST | `/api/doctor/applyfordoctor` | 申请成为医生 |
+| PUT | `/api/doctor/acceptdoctor` | 通过申请（管理员） |
+| PUT | `/api/doctor/rejectdoctor` | 驳回申请（管理员） |
+| PUT | `/api/doctor/deletedoctor` | 移除医生（管理员） |
+| GET | `/api/appointment/getallappointments?search=` | 预约列表（按用户过滤） |
+| POST | `/api/appointment/bookappointment` | 预约医生 |
+| PUT | `/api/appointment/completed` | 标记预约完成 |
+| GET | `/api/notification/getallnotifs` | 当前用户通知 |
+
+除登录/注册外，接口均通过 `Authorization: Bearer <token>` 鉴权；错误统一返回 `{ message }`。
+
+## 环境变量
+
+**server/.env**
 
 ```
-npm start
+PORT=5001
+MONGO_URI=mongodb://127.0.0.1:27017/healthbooker
+JWT_SECRET=your_jwt_secret
 ```
 
-<li>To run the frontend, open a new terminal and run 'cd client/' to go to client directory and execute: </li>
+**client/.env**（可选）
 
 ```
-npm start
+VITE_API_BASE_URL=/api
+VITE_CLOUDINARY_CLOUD_NAME=        # 配置后注册头像上传走 Cloudinary
+VITE_CLOUDINARY_PRESET=
+VITE_FORMSPREE_ENDPOINT=           # 配置后首页联系表单提交到 Formspree
 ```
 
-</ol>
+## 本地运行
 
-### To access the admin dashboard
+1. 启动 MongoDB（本地或 Docker）：
 
-<ol>
-<li>Download the project from the git repository</li>
-<li>You need to create your own MongoDB instance and add the MongoDB url to the .env file</li>
-<li>Register on the website and go to your MongoDB and manually change the 'isAdmin' field of the account you want to make admin in the DB to 'true' and then log in back on the site</li>
-<li>Now you will be able to access the admin dashboard</li>
-</ol>
+   ```
+   docker run -d --name hb-mongo -p 27017:27017 mongo:7
+   ```
 
----
+2. 安装依赖并初始化数据：
 
-<p align="right"><a href="#top">Back to Top</a></p>
+   ```
+   npm run install:all
+   npm run seed
+   ```
 
-### Home page
+3. 一键启动前后端（后端 :5001，前端 Vite :5173，/api 自动代理）：
 
-<img src="./client/src/images/full_pic.png" alt='home'/>
+   ```
+   npm run dev
+   ```
 
-### Sign up page
+4. 生产模式（构建前端后由后端单端口 :5001 托管）：
 
-<img src="./client/src/images/signup.png" alt='signup'/>
+   ```
+   npm run build
+   npm start
+   ```
 
-### Sign in page
+seed 脚本内置测试账号：
 
-<img src="./client/src/images/signin.png" alt='signin'/>
+| 角色 | 邮箱 | 密码 |
+| --- | --- | --- |
+| 管理员 | admin@healthbooker.com | admin123 |
+| 医生 | doctor@healthbooker.com | doctor123 |
+| 用户 | user@healthbooker.com | user12345 |
 
-### Profile page
+## License
 
-<img src="./client/src/images/profile.png" alt='profile'/>
-
-### All Doctors page
-
-<img src="./client/src/images/doctors.png" alt='doctors'/>
-
-### Apply for doctor page
-
-<img src="./client/src/images/docapply.png" alt='applyfordoctor'/>
-
-### Admin all users dashboard
-
-<img src="./client/src/images/users.png" alt='users'/>
-
-### Admin all applications page
-
-<img src="./client/src/images/applications.png" alt='applications'/>
-
-### Book Appointment page
-
-<img src="./client/src/images/bookappointment.png" alt='bookappointment'/>
-
-### Users all appointments page
-
-<img src="./client/src/images/userappointments.png" alt='appointments'/>
-
-### Doctors all appointments page
-
-<img src="./client/src/images/doctorappointments.png" alt='appointments'/>
-
-### Notifications page
-
-<img src="./client/src/images/notifications.png" alt='notifications'/>
-
----
-
-<br/>
-
-### 🛡️ License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
-
-<br/>
-
----
-
-<h3 align="center"> Give it a 🌟 if you 🧡 this repository </h3>
-
----
-
-<p align="right"><a href="#top">Back to Top</a></p>
-
-</div>
+MIT
